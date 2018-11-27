@@ -19,7 +19,7 @@ import security.UserAccount;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Actor extends DomainEntity {
+public class Actor extends DomainEntity implements Cloneable{
 
 	private String						name;
 	private String						middleName;
@@ -34,6 +34,15 @@ public class Actor extends DomainEntity {
 	private UserAccount					userAccount;
 	private Collection<MessageBox>		messageBoxes;
 
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 	@NotBlank
 	public String getName() {

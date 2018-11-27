@@ -16,7 +16,7 @@ import javax.validation.constraints.Past;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Finder extends DomainEntity {
+public class Finder extends DomainEntity implements Cloneable {
 
 	private String					keyword;
 	private String					category;
@@ -28,7 +28,16 @@ public class Finder extends DomainEntity {
 	private Date					lastUpdate;
 
 	private Collection<FixUpTask>	fixuptaskStored;
-
+	
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 	public String getKeyword() {
 		return this.keyword;

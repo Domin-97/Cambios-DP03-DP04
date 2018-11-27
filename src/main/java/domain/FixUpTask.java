@@ -30,6 +30,7 @@ import org.hibernate.search.annotations.AnalyzerDef;
 import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.IndexedEmbedded;
 import org.hibernate.search.annotations.Parameter;
 import org.hibernate.search.annotations.Store;
 import org.hibernate.search.annotations.TokenFilterDef;
@@ -179,6 +180,7 @@ public class FixUpTask extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
+	@IndexedEmbedded
 	public Category getCategory() {
 		return this.category;
 	}

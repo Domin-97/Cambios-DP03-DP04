@@ -10,12 +10,21 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class SocialProfile extends DomainEntity {
+public class SocialProfile extends DomainEntity implements Cloneable{
 
 	private String	nick;
 	private String	socialNetworkName;
 	private String	link;
 
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 	@NotBlank
 	public String getNick() {

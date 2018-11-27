@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 
+import org.hibernate.search.annotations.Field;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -20,6 +21,7 @@ public class Category extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
+	@Field
 	public String getName() {
 		return this.name;
 	}
