@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Section extends DomainEntity {
+public class Section extends DomainEntity  implements Cloneable{
 
 	private int					number;
 	private String				title;
@@ -21,6 +21,16 @@ public class Section extends DomainEntity {
 	private Collection<String>	pictures;
 
 
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
+	
 	public int getNumber() {
 		return this.number;
 	}

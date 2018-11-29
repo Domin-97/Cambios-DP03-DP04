@@ -58,7 +58,7 @@ public class CreditCard {
 		this.brandName = brandName;
 	}
 
-	@Range(min = 00, max = 12)
+	@Range(min = 01, max = 12)
 	public Integer getExpirationMonth() {
 		return this.expirationMonth;
 	}

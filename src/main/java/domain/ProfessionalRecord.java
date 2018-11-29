@@ -18,7 +18,7 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class ProfessionalRecord extends DomainEntity {
+public class ProfessionalRecord extends DomainEntity implements Cloneable {
 
 	private String				companyName;
 	private Date				proStartDate;
@@ -82,5 +82,15 @@ public class ProfessionalRecord extends DomainEntity {
 	public void setProComments(final Collection<String> proComments) {
 		this.proComments = proComments;
 	}
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 }
+

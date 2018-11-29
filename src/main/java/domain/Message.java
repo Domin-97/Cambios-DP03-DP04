@@ -17,6 +17,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -35,7 +37,7 @@ public class Message extends DomainEntity {
 	public static final String	NEUTRAL	= "NEUTRAL";
 	public static final String	LOW		= "LOW";
 
-
+	@NotFound(action = NotFoundAction.IGNORE)
 	@Valid
 	@ManyToOne(optional = false)
 	public Actor getSender() {
@@ -66,10 +68,10 @@ public class Message extends DomainEntity {
 		this.sendDate = sendDate;
 	}
 	@NotBlank
-	public String getsubject() {
+	public String getSubject() {
 		return this.subject;
 	}
-	public void setsubject(final String subject) {
+	public void setSubject(final String subject) {
 		this.subject = subject;
 	}
 	@NotBlank

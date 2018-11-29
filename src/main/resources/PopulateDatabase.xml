@@ -236,7 +236,7 @@
  		<property name="photo" value="https://www.pinterest.es/pin/341640321728651867/"/>
   		<property name="phoneNumber" value="656234123" />
   		<property name="email" value="admin@email.com" />
-  		<property name="address" value="Avd Cosa Nº Casa Blq Piso 22ºA" /> 
+  		<property name="address" value="Avd Cosa NÃ‚Âº Casa Blq Piso 22Ã‚ÂºA" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="socialProfiles">
@@ -287,7 +287,7 @@
 	
 	<bean id="application3" class="domain.Application">
 		<property name="moment" value="11/08/2018 12:00"></property>
-			<property name="status" value="ACCEPTED"></property>
+			<property name="status" value="PENDING"></property>
 		<property name="offeredPrice" ref="money3"></property>
 		 <property name = "comments">
          <list>
@@ -356,7 +356,34 @@
 		<property name="handyWorker" ref="handyworker3"></property>
 		<property name="fixUpTask" ref="fixUpTask6"></property>
 	</bean>
-	<!-- CATEGORIES -->
+	
+	<bean id="application8" class="domain.Application">
+		<property name="moment" value="11/20/2018 12:00"></property>
+			<property name="status" value="PENDING"></property>
+		<property name="offeredPrice" ref="money4"></property>
+		 <property name = "comments">
+         <list>
+         </list>
+      </property>
+				<!--TO DO CREDIT CARD-->
+		<property name="handyWorker" ref="handyworker2"></property>
+		<property name="fixUpTask" ref="fixUpTask7"></property>
+	</bean>
+	
+	<bean id="application9" class="domain.Application">
+		<property name="moment" value="11/20/2018 12:00"></property>
+			<property name="status" value="PENDING"></property>
+		<property name="offeredPrice" ref="money2"></property>
+		 <property name = "comments">
+         <list>
+         </list>
+      </property>
+				<!--TO DO CREDIT CARD-->
+		<property name="handyWorker" ref="handyworker3"></property>
+		<property name="fixUpTask" ref="fixUpTask7"></property>
+	</bean>
+	
+		<!-- CATEGORIES -->
 		
 	<bean id="category1" class="domain.Category">
 		<property name="name" value="CATEGORY"></property>
@@ -368,19 +395,104 @@
 	</bean>	
 	
 	<bean id="category3" class="domain.Category">
-		<property name="name" value="PLUMBING"></property>
+		<property name="name" value="CEILING REPAIR"></property>
 		<property name="parentCategory" ref="category1"></property>
 	</bean>		
 
 	<bean id="category4" class="domain.Category">
-		<property name="name" value="PAINTING"></property>
+		<property name="name" value="CLEANING"></property>
 		<property name="parentCategory" ref="category1"></property>
 	</bean>	
 
 	<bean id="category5" class="domain.Category">
-		<property name="name" value="ELECTRICITY"></property>
+		<property name="name" value="CONCRETE WORK"></property>
 		<property name="parentCategory" ref="category1"></property>
 	</bean>	
+
+	<bean id="category6" class="domain.Category">
+		<property name="name" value="DOORS"></property>
+		<property name="parentCategory" ref="category2"></property>
+	</bean>	
+
+	<bean id="category7" class="domain.Category">
+		<property name="name" value="ELECTRICAL WIRING"></property>
+		<property name="parentCategory" ref="category1"></property>
+	</bean>	
+
+	<bean id="category8" class="domain.Category">
+		<property name="name" value="FAN INSTALLATION"></property>
+		<property name="parentCategory" ref="category7"></property>
+	</bean>	
+
+	<bean id="category9" class="domain.Category">
+		<property name="name" value="FENCE FIXING"></property>
+		<property name="parentCategory" ref="category2"></property>
+	</bean>	
+
+	<bean id="category10" class="domain.Category">
+		<property name="name" value="HOME SECURITY SYSTEMS"></property>
+		<property name="parentCategory" ref="category7"></property>
+	</bean>	
+
+	<bean id="category11" class="domain.Category">
+		<property name="name" value="INSULATION INSTALLATION"></property>
+		<property name="parentCategory" ref="category2"></property>
+	</bean>	
+
+	<bean id="category12" class="domain.Category">
+		<property name="name" value="LAMP REPAIRS"></property>
+		<property name="parentCategory" ref="category7"></property>
+	</bean>	
+
+	<bean id="category13" class="domain.Category">
+		<property name="name" value="MOVING"></property>
+		<property name="parentCategory" ref="category1"></property>
+	</bean>	
+
+	<bean id="category14" class="domain.Category">
+		<property name="name" value="PAINTING"></property>
+		<property name="parentCategory" ref="category2"></property>
+	</bean>	
+
+	<bean id="category15" class="domain.Category">
+		<property name="name" value="PEST CONTROL"></property>
+		<property name="parentCategory" ref="category1"></property>
+	</bean>	
+
+	<bean id="category16" class="domain.Category">
+		<property name="name" value="PLUMBING REPAIRS"></property>
+		<property name="parentCategory" ref="category1"></property>
+	</bean>	
+
+	<bean id="category17" class="domain.Category">
+		<property name="name" value="ROOFING"></property>
+		<property name="parentCategory" ref="category3"></property>
+	</bean>	
+
+	<bean id="category18" class="domain.Category">
+		<property name="name" value="SHELF INSTALLATION"></property>
+		<property name="parentCategory" ref="category2"></property>
+	</bean>	
+
+	<bean id="category19" class="domain.Category">
+		<property name="name" value="SOLAR PANELS"></property>
+		<property name="parentCategory" ref="category7"></property>
+	</bean>	
+
+	<bean id="category20" class="domain.Category">
+		<property name="name" value="SOUNDPROOFING"></property>
+		<property name="parentCategory" ref="category2"></property>
+	</bean>	
+
+	<bean id="category21" class="domain.Category">
+		<property name="name" value="SPRINKLER REPAIR"></property>
+		<property name="parentCategory" ref="category16"></property>
+	</bean>	
+
+	<bean id="category22" class="domain.Category">
+		<property name="name" value="WINDOW REPAIR"></property>
+		<property name="parentCategory" ref="category2"></property>
+	</bean>
 	
 	<!-- CONFIGURATION NOT FINAL-->
 
@@ -388,17 +500,17 @@
 		<property name="systemName" value="ACME-HandyWorker"/>
 		<property name="banner" value="http://hw.es/banner.png"/>
 		<property name="enWelcomeMessage" value="Welcome!"/>
-		<property name="esWelcomeMessage" value="¡Bienvenido!"/>
+		<property name="esWelcomeMessage" value="Ã‚Â¡Bienvenido!"/>
 		<property name="spamWords">
 		<list>
 			<value>sex</value>
 			<value>viagra</value>
 			<value>cialis</value>
 			<value>one million</value>
-			<value>you’ve been selected</value>
+			<value>you've been selected</value>
 			<value>Nigeria</value>
 			<value>sexo</value>
-			<value>un millón</value>
+			<value>un millÃƒÂ³n</value>
 			<value>ha sido seleccionado</value>			
 		</list>
 		</property>
@@ -448,7 +560,7 @@
 			</list>
 		</property>
 		<property name="report" ref="report1"></property>
-		<property name="customer" ref="customer1"></property>
+		<property name="customer" ref="customer"></property>
 		<property name="fixUpTask" ref="fixUpTask1"></property>
 	</bean>
 
@@ -463,7 +575,7 @@
 		</property>
 		<property name="report" ref="report2"></property>
 				<!-- cambiar fixUpTask y Customer si hay mas-->
-		<property name="customer" ref="customer1"></property>
+		<property name="customer" ref="customer"></property>
 		<property name="fixUpTask" ref="fixUpTask1"></property>
 	</bean>
 	
@@ -491,6 +603,7 @@
 			</list>
 		</property>
 				<!-- cambiar fixUpTask y Customer si hay mas-->
+		<property name="report"><null/></property>
 		<property name="customer" ref="customer3"></property>
 		<property name="fixUpTask" ref="fixUpTask4"></property>
 	</bean>
@@ -504,6 +617,7 @@
 			</list>
 		</property>
 				<!-- cambiar fixUpTask y Customer si hay mas-->
+		<property name="report"><null/></property>
 		<property name="customer" ref="customer3"></property>
 		<property name="fixUpTask" ref="fixUpTask5"></property>
 	</bean>
@@ -517,6 +631,7 @@
 			</list>
 		</property>
 				<!-- cambiar fixUpTask y Customer si hay mas-->
+		<property name="report"><null/></property>
 		<property name="customer" ref="customer4"></property>
 		<property name="fixUpTask" ref="fixUpTask6"></property>
 	</bean>
@@ -531,16 +646,16 @@
 		<property name="expirationYear" value="90"/>
 	</bean>
 	
-	<!-- CUSTOMERS -->
+	<!-- CUSTOMERS --> 
 	
-	<bean id="customer1" class="domain.Customer">
+	<bean id="customer" class="domain.Customer">
 		<property name="name" value="Domin" /> 
 		<property name="middleName" value="DME"/>
- 		<property name="surname" value="Espejo" /> 
+ 		<property name="surname" value="Espejismo" /> 
  		<property name="photo" value="https://www.pinterest.es/pin/730638739520175806/"/>
   		<property name="phoneNumber" value="623433123" />
-  		<property name="email" value="customer1@email.com" />
-  		<property name="address" value="Avd Rafael Corchuelo matricula nº4" /> 
+  		<property name="email" value="customer@email.com" />
+  		<property name="address" value="Avd Rafael nÂº4" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="score" value="0"/>
@@ -573,6 +688,8 @@
 			<ref bean="fixUpTask1"/>
 			<ref bean="fixUpTask2"/>
 			<ref bean="fixUpTask3"/>
+			<ref bean="fixUpTask7"/>
+			<ref bean="fixUpTask8"/>
 			</list>
 		</property>
 	</bean>
@@ -580,11 +697,11 @@
 	<bean id="customer2" class="domain.Customer">
 		<property name="name" value="Monica"/>
 		<property name="middleName" value="MN"/>
- 		<property name="surname" value="Naranjo" /> 
+ 		<property name="surname" value="Naranjito" /> 
  		<property name="photo" value="https://www.pinterest.es/pin/730638739520175806/"/>
   		<property name="phoneNumber" value="623584623" />
   		<property name="email" value="customer2@email.com" />
-  		<property name="address" value="Avd Estrellato matricula nº4" /> 
+  		<property name="address" value="Avd Estrellato matricula nÃ‚Âº4" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="score" value="0"/>
@@ -601,7 +718,7 @@
   			<ref bean="SocialProfileCus2"/>
   			</list>
   		</property>
-		<property name="userAccount" ref="userAccount2" />	
+		<property name="userAccount" ref="userAccount9" />	
 		<property name="messageBoxes">
 			<list>
   				<ref bean="messageBoxCus-inbox2"/>
@@ -620,11 +737,11 @@
 	<bean id="customer3" class="domain.Customer">
 		<property name="name" value="Felipe"/>
 		<property name="middleName" value="FG"/>
- 		<property name="surname" value="González" /> 
+ 		<property name="surname" value="Gonzalez" /> 
  		<property name="photo" value="https://www.pinterest.es/pin/730638739520175806/"/>
   		<property name="phoneNumber" value="623584623" />
   		<property name="email" value="customer3@email.com" />
-  		<property name="address" value="Avd Estrellato matricula nº4" /> 
+  		<property name="address" value="Avd Estrellato matricula nÃ‚Âº4" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="score" value="0"/>
@@ -660,11 +777,11 @@
 	<bean id="customer4" class="domain.Customer">
 		<property name="name" value="Florentino"/>
 		<property name="middleName" value="FP"/>
- 		<property name="surname" value="Pérez" /> 
+ 		<property name="surname" value="PÃƒÂ©rez" /> 
  		<property name="photo" value="https://www.pinterest.es/pin/730638739520175806/"/>
   		<property name="phoneNumber" value="623584623" />
   		<property name="email" value="customer4@email.com" />
-  		<property name="address" value="Avd Estrellato matricula nº4" /> 
+  		<property name="address" value="Avd Estrellato matricula nÃ‚Âº4" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="score" value="0"/>
@@ -706,7 +823,7 @@
  		<property name="photo" value="https://www.pinterest.es/pin/730638739520175806/"/>
   		<property name="phoneNumber" value="623584623" />
   		<property name="email" value="customer5@email.com" />
-  		<property name="address" value="Avd Estrellato matricula nº4" /> 
+  		<property name="address" value="Avd Estrellato matricula nÃ‚Âº4" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="score" value="0"/>
@@ -743,7 +860,7 @@
 		<property name="ticker" value="cur1"/>
 		<property name="fullname" value="curriculum McDonalds"/>
 		<property name="photo" value="https://www.pinterest.es/pin/730638739520175806/"/>
-		<property name="email" value="Pancho@us.es"/>
+		<property name="email" value="Perez@us.es"/>
 		<property name="phoneNumber" value="666666666"/>
 		<property name="linkedInProfile" value="https://www.linkedin.com/m/login/"/>
 		<property name="eduRecord">
@@ -910,6 +1027,7 @@
 	<bean id="endorsement4" class="domain.Endorsement">
 		<property name="moment" value="08/11/2018 17:50"></property>
 		<property name="comment" value="not, bad"></property>
+		<property name="score" value="0"></property>
 	</bean>
 	
 	<bean id="endorsement5" class="domain.Endorsement">
@@ -945,7 +1063,7 @@
 	
 	<bean id="endorserRecord3" class="domain.EndorserRecord">
 		<property name="fullname" value="Usama espartaque"/>
-		<property name="email" value="endorserSenpai@gmail.com"/>
+		<property name="email" value="endorser@gmail.com"/>
 		<property name="phoneNumber" value="645548969"/>
 		<property name="linkedInProfile" value="https://www.google.com"/>
 		<property name="endComment">
@@ -955,8 +1073,8 @@
 	</bean>
 	
 	<bean id="endorserRecord4" class="domain.EndorserRecord">
-		<property name="fullname" value="Benito Camela"/>
-		<property name="email" value="patron@gmail.com"/>
+		<property name="fullname" value="Ben Rodriguez"/>
+		<property name="email" value="BenRodriguez@gmail.com"/>
 		<property name="phoneNumber" value="683548969"/>
 		<property name="linkedInProfile" value="https://www.google.com"/>
 		<property name="endComment">
@@ -991,7 +1109,7 @@
 	</bean>
 	
 	<bean id="professionalRecord3" class="domain.ProfessionalRecord">
-		<property name="companyName" value="Sloppy´s Joe"/>
+		<property name="companyName" value="SloppyÃ‚Â´s Joe"/>
 		<property name="proStartDate" value="10/10/2017"/>
 		<property name="role" value="Camarero"/>
 		<property name="proAttachment" value="https://www.sloppyjoe.com"/>
@@ -1052,7 +1170,7 @@
 	<bean id="handyworker1" class="domain.HandyWorker">
 		<property name="name" value="Pepe" /> 
 		<property name="middleName" value="PF"/>
- 		<property name="surname" value="Fernández" /> 
+ 		<property name="surname" value="Fernandez" /> 
  		<property name="photo" value="https://www.pinterest.es/pin/834432637187059998/"/>
   		<property name="phoneNumber" value="622587211" />
   		<property name="email" value="handyworker1@email.com" />
@@ -1083,7 +1201,7 @@
   				<ref bean="messageBoxHw-spambox1"/>
   			</list>
 		</property>
-		<property name="make" value="José María Fernandez Zambrano"/>
+		<property name="make" value="JosÃƒÂ© María Fernandez Zambrano"/>
 		<property name="Curricula">
 			<list>
 				<ref bean="curriculum1"/>
@@ -1107,7 +1225,7 @@
 	<bean id="handyworker2" class="domain.HandyWorker">
 		<property name="name" value="Enrique" /> 
 		<property name="middleName" value="QS"/>
- 		<property name="surname" value="Setién" /> 
+ 		<property name="surname" value="SetiÃƒÂ©n" /> 
  		<property name="photo" value="https://www.pinterest.es/pin/834432637187059998/"/>
   		<property name="phoneNumber" value="622587222" />
   		<property name="email" value="handyworker2@email.com" />
@@ -1135,7 +1253,7 @@
   				<ref bean="messageBoxHw-spambox2"/>
   			</list>
 		</property>
-		<property name="make" value="Quique Setién"/>
+		<property name="make" value="Quique SetiÃƒÂ©n"/>
 		<property name="Curricula">
 			<list>
 			</list>
@@ -1151,7 +1269,8 @@
 			<list>
 				<ref bean="application2"/>	
 				<ref bean="application4"/>
-				<ref bean="application5"/>	
+				<ref bean="application5"/>
+				<ref bean="application8"/>		
 			</list>
 		</property>
 	</bean>
@@ -1193,19 +1312,20 @@
 		<property name="make" value="Eder Sarabia"/>
 		<property name="Curricula">
 			<list>
-<!--*************** PENDIENTE DE AÑADIR****************** -->
+<!--*************** PENDIENTE DE AÃƒâ€˜ADIR****************** -->
 			</list>
 		</property>
 		<property name="finder" ref="finder3"/>
 		<property name="tutorials">
 			<list>
-<!--*************** PENDIENTE DE AÑADIR****************** -->
+<!--*************** PENDIENTE DE AÃƒâ€˜ADIR****************** -->
 			</list>
 		</property>
 		<property name="applications">
 			<list>
 			<ref bean="application6"/>
 			<ref bean="application7"/>
+			<ref bean="application9"/>	
 			</list>
 		</property>
 	</bean>
@@ -1244,7 +1364,7 @@
 		<property name="address" value="Reina Mercedes sn. ETS Ingenieria informatica"></property>
 		<property name="startDate" value="10/18/2018"></property>
 		<property name="endDate" value="10/25/2018"></property>
-		<property name="customer" ref="customer1"/>
+		<property name="customer" ref="customer"/>
 		<property name="complaints">
 			<list>
 				<ref bean="complaint1"/>
@@ -1281,7 +1401,7 @@
 		<property name="address" value="Calle  del Martirio"></property>
 		<property name="startDate" value="10/19/2018"></property>
 		<property name="endDate" value="10/26/2018"></property>
-		<property name="customer" ref="customer1"/>
+		<property name="customer" ref="customer"/>
 		<property name="complaints">
 			<list>
 <!--*************** CASO SIN NINGUNA COMPLAINT****************** -->			
@@ -1311,8 +1431,8 @@
 		<property name="description" value="Busco una lanza"></property>
 		<property name="address" value="Camino de Azeroth"></property>
 		<property name="startDate" value="10/25/2018"></property>
-		<property name="endDate" value="10/29/2018"></property>
-		<property name="customer" ref="customer1"/>
+		<property name="endDate" value="10/29/2020"></property>
+		<property name="customer" ref="customer"/>
 		<property name="complaints">
 			<list>
 				<ref bean="complaint3"/>	
@@ -1428,6 +1548,281 @@
 		
 	</bean>
 	
+	<bean id="fixUpTask7" class="domain.FixUpTask">
+		<property name="ticker" value="181011-838999"></property>
+		<property name="publishedMoment" value="10/11/2018 11:45"></property>
+		<property name="description" value="My computer is broken again"></property>
+		<property name="address" value="Reina Mercedes sn. ETS Ingenieria informatica"></property>
+		<property name="startDate" value="12/18/2018"></property>
+		<property name="endDate" value="12/25/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				<ref bean="application8"/>
+				<ref bean="application9"/>
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask8" class="domain.FixUpTask">
+		<property name="ticker" value="181011-838998"></property>
+		<property name="publishedMoment" value="10/11/2018 11:45"></property>
+		<property name="description" value="My house is broken"></property>
+		<property name="address" value="Reina Mercedes sn. ETS Ingenieria informatica"></property>
+		<property name="startDate" value="12/18/2018"></property>
+		<property name="endDate" value="12/29/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category2"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask9" class="domain.FixUpTask">
+		<property name="ticker" value="181011-938123"></property>
+		<property name="publishedMoment" value="10/20/2018 11:45"></property>
+		<property name="description" value="My computer is broken"></property>
+		<property name="address" value="Reina Mercedes NÃ‚Âº2"></property>
+		<property name="startDate" value="10/25/2018"></property>
+		<property name="endDate" value="10/28/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+				
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+				
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask10" class="domain.FixUpTask">
+		<property name="ticker" value="181011-118123"></property>
+		<property name="publishedMoment" value="10/24/2018 11:45"></property>
+		<property name="description" value="My mobile doesnt work"></property>
+		<property name="address" value="Calle Magica NÃ‚Âº7"></property>
+		<property name="startDate" value="10/26/2018"></property>
+		<property name="endDate" value="10/29/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+				
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+				
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask11" class="domain.FixUpTask">
+		<property name="ticker" value="181011-241923"></property>
+		<property name="publishedMoment" value="08/20/2018 11:45"></property>
+		<property name="description" value="My web is broken"></property>
+		<property name="address" value="Calle canelo NÃ‚Âº4"></property>
+		<property name="startDate" value="08/25/2018"></property>
+		<property name="endDate" value="08/28/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+				
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+				
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask12" class="domain.FixUpTask">
+		<property name="ticker" value="181011-834823"></property>
+		<property name="publishedMoment" value="11/20/2018 11:45"></property>
+		<property name="description" value="My tablet is broken"></property>
+		<property name="address" value="Reina Mercedes NÃ‚Âº2"></property>
+		<property name="startDate" value="11/25/2018"></property>
+		<property name="endDate" value="11/28/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+				
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+				
+			</list>
+		</property>
+		<property name="warranty" ref="warranty2"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask13" class="domain.FixUpTask">
+		<property name="ticker" value="181011-838253"></property>
+		<property name="publishedMoment" value="07/20/2018 11:45"></property>
+		<property name="description" value="My Apple watch doesnt work"></property>
+		<property name="address" value="Capitan Vigueras NÃ‚Âº2"></property>
+		<property name="startDate" value="07/25/2018"></property>
+		<property name="endDate" value="07/28/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+				
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+				
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask14" class="domain.FixUpTask">
+		<property name="ticker" value="181011-878123"></property>
+		<property name="publishedMoment" value="05/20/2018 11:45"></property>
+		<property name="description" value="My laptop is wroken"></property>
+		<property name="address" value="Calle Pizarra NÃ‚Âº4"></property>
+		<property name="startDate" value="05/24/2018"></property>
+		<property name="endDate" value="05/25/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+				
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+				
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="fixUpTask15" class="domain.FixUpTask">
+		<property name="ticker" value="181011-832523"></property>
+		<property name="publishedMoment" value="01/20/2018 11:45"></property>
+		<property name="description" value="My computer is dead"></property>
+		<property name="address" value="Reina Mercedes NÃ‚Âº2"></property>
+		<property name="startDate" value="01/25/2018"></property>
+		<property name="endDate" value="01/28/2018"></property>
+		<property name="customer" ref="customer"/>
+		<property name="complaints">
+			<list>
+				
+			</list>
+		</property>
+		<property name="applications">
+			<list>
+				
+			</list>
+		</property>
+		<property name="workPlan">
+			<list>
+				
+			</list>
+		</property>
+		<property name="warranty" ref="warranty1"></property>
+		<property name="category" ref="category1"></property>
+		<property name="maxPrice">
+			<ref bean="money1"/>
+		</property>
+		
+	</bean>
+	
 	
 	
 	<!-- MESSAGE BOXES -->
@@ -1438,7 +1833,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageRef1"/>	
+			<ref bean="messageRef1InAdm1"/>	
 			</list>
 		</property>	
 	</bean>
@@ -1448,8 +1843,8 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageAd1"/>
-			<ref bean="messageWelcome"/>
+			<ref bean="messageAd1Out"/>
+			<ref bean="messageWelcomeOut"/>
 			</list>
 		</property>	
 	</bean>
@@ -1472,6 +1867,7 @@
 		</property>	
 	</bean>
 	
+	
 	<!-- CUSTOMERS -->
 		
 	<bean id="messageBoxCus-inbox1" class="domain.MessageBox">
@@ -1479,8 +1875,8 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageAd1"/>
-				<ref bean="messageWelcome"/>
+				<ref bean="messageAd1InCus1"/>
+				<ref bean="messageWelcomeInCus1"/>
 			</list>
 		</property>	
 	</bean>
@@ -1490,7 +1886,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageCus1"/>
+			<ref bean="messageCus1Out"/>
 			</list>
 		</property>	
 	</bean>
@@ -1500,7 +1896,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageCus2"/>			
+			<ref bean="messageCus2InCus1"/>			
 			</list>
 		</property>	
 	</bean>
@@ -1510,7 +1906,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageSpam"/>
+			<ref bean="messageSpamInCus1"/>
 			</list>
 		</property>	
 	</bean>
@@ -1520,7 +1916,8 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageWelcome"/>			
+				<ref bean="messageWelcomeInCus2"/>		
+				<ref bean="messageCus1InCus2"/>			
 			</list>
 		</property>	
 	</bean>
@@ -1530,7 +1927,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageCus2"/>			
+			<ref bean="messageCus2Out"/>			
 			</list>
 		</property>	
 	</bean>
@@ -1539,8 +1936,7 @@
 		<property name="name" value="Trash box"/>
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
-			<list>
-			<ref bean="messageCus1"/>			
+			<list>	
 			</list>
 		</property>	
 	</bean>
@@ -1550,7 +1946,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageSpam"/>
+			<ref bean="messageSpamInCus2"/>
 			</list>
 		</property>	
 	</bean>
@@ -1670,9 +2066,9 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageAd1"/>
-				<ref bean="messageSpo1"/>
-				<ref bean="messageHw2"/>
+				<ref bean="messageAd1InHw1"/>
+				<ref bean="messageSpo1InHw1"/>
+				<ref bean="messageHw2InHw1"/>
 				
 			</list>
 		</property>	
@@ -1683,7 +2079,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageHw1"/>
+			<ref bean="messageHw1Out"/>
 			</list>
 		</property>	
 	</bean>
@@ -1693,8 +2089,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageWelcome"/>
-			<ref bean="messageHw3"/>
+			<ref bean="messageWelcomeInHw1"/>
 			</list>
 		</property>	
 	</bean>
@@ -1704,7 +2099,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageSpam"/>
+			<ref bean="messageSpamInHw1"/>
 			</list>
 		</property>	
 	</bean>
@@ -1714,8 +2109,8 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>			
-				<ref bean="messageWelcome"/>
-				<ref bean="messageHw1"/>
+				<ref bean="messageWelcomeInHw2"/>
+				<ref bean="messageHw1InHw2"/>
 				
 			</list>
 		</property>	
@@ -1726,7 +2121,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageHw2"/>	
+				<ref bean="messageHw2Out"/>	
 			</list>
 		</property>	
 	</bean>
@@ -1736,7 +2131,6 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageHw3"/>
 			</list>
 		</property>	
 	</bean>
@@ -1746,7 +2140,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageSpam"/>
+			<ref bean="messageSpamInHw2"/>
 			</list>
 		</property>	
 	</bean>
@@ -1756,8 +2150,8 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageHw1"/>
-				<ref bean="messageHw2"/>
+				<ref bean="messageHw1InHw3"/>
+				<ref bean="messageHw2InHw3"/>
 			</list>
 		</property>	
 	</bean>
@@ -1767,7 +2161,6 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageHw3"/>	
 			</list>
 		</property>	
 	</bean>
@@ -1777,7 +2170,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageWelcome"/>
+				<ref bean="messageWelcomeInHw3"/>
 			</list>
 		</property>	
 	</bean>
@@ -1787,7 +2180,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageSpam"/>
+			<ref bean="messageSpamInHw3"/>
 			</list>
 		</property>	
 	</bean>
@@ -1799,7 +2192,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageWelcome"/>
+				<ref bean="messageWelcomeInSpo1"/>
 			</list>
 		</property>	
 	</bean>
@@ -1809,8 +2202,8 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageSpo1"/>
-				<ref bean="messageSpam"/>
+				<ref bean="messageSpo1Out"/>
+				<ref bean="messageSpamOut"/>
 			</list>
 		</property>	
 	</bean>
@@ -1829,7 +2222,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageSpam"/>
+			<ref bean="messageSpamOut"/>
 			</list>
 		</property>	
 	</bean>
@@ -1950,7 +2343,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-				<ref bean="messageWelcome"/>
+				<ref bean="messageWelcomeInRef1"/>
 			</list>
 		</property>	
 	</bean>
@@ -1960,7 +2353,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageRef1"/>
+			<ref bean="messageRef1Out"/>
 			</list>
 		</property>	
 	</bean>
@@ -1979,7 +2372,7 @@
 		<property name="isSystem" value="true"></property>
 		<property name="messages">
 			<list>
-			<ref bean="messageSpam"/>
+			<ref bean="messageSpamInRef1"/>
 			</list>
 		</property>	
 	</bean>
@@ -2060,9 +2453,9 @@
 	
 	<!-- MESSAGES -->
 	
-	<bean id="messageAd1" class="domain.Message">
+	<bean id="messageAd1Out" class="domain.Message">
 		<property name="sendDate" value="10/20/2018 09:00"/>
-		<property name="subject" value="Avesinosmorimos"/>
+		<property name="subject" value="Subject1"/>
 		<property name="body" value="Ya"/>
 		<property name="priority" value="HIGH" />
 		<property name="tags">
@@ -2072,30 +2465,82 @@
 		<property name="sender" ref="admin1"/>
 		<property name="recipients">
 			<list>
-				<ref bean="customer1"></ref>
+				<ref bean="customer"></ref>
 				<ref bean="handyworker1"/>
 			</list>
 		</property>	
 	</bean>
-	<bean id="messageCus1" class="domain.Message">
-		<property name="sendDate" value="10/29/2018 09:00"/>
-		<property name="subject" value="Amoacalmarnos"/>
+	
+	<bean id="messageAd1InCus1" class="domain.Message">
+		<property name="sendDate" value="10/20/2018 09:00"/>
+		<property name="subject" value="Subject2"/>
 		<property name="body" value="Ya"/>
 		<property name="priority" value="HIGH" />
 		<property name="tags">
 			<list>
 			</list>
 		</property>
-		<property name="sender" ref="customer1"/>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="handyworker1"/>
+			</list>
+		</property>	
+	</bean>
+	<bean id="messageAd1InHw1" class="domain.Message">
+		<property name="sendDate" value="10/20/2018 09:00"/>
+		<property name="subject" value="Subject3"/>
+		<property name="body" value="Ya"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="handyworker1"/>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="messageCus1Out" class="domain.Message">
+		<property name="sendDate" value="10/19/2018 09:00"/>
+		<property name="subject" value="Subject3"/>
+		<property name="body" value="Ya"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="customer"/>
 		<property name="recipients">
 			<list>
 				<ref bean="customer2"></ref>
 			</list>
 		</property>	
 	</bean>
-	<bean id="messageCus2" class="domain.Message">
-		<property name="sendDate" value="10/29/2018 09:01"/>
-		<property name="subject" value="Amoacalmarnos"/>
+	<bean id="messageCus1InCus2" class="domain.Message">
+		<property name="sendDate" value="10/19/2018 09:00"/>
+		<property name="subject" value="Subject4"/>
+		<property name="body" value="Ya"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="customer"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer2"></ref>
+			</list>
+		</property>	
+	</bean>
+	<bean id="messageCus2Out" class="domain.Message">
+		<property name="sendDate" value="10/19/2018 09:01"/>
+		<property name="subject" value="Subject5"/>
 		<property name="body" value="OK"/>
 		<property name="priority" value="HIGH" />
 		<property name="tags">
@@ -2105,14 +2550,30 @@
 		<property name="sender" ref="customer2"/>
 		<property name="recipients">
 			<list>
-				<ref bean="customer1"></ref>
+				<ref bean="customer"></ref>
 			</list>
 		</property>	
 	</bean>
-	<bean id="messageHw1" class="domain.Message">
+	<bean id="messageCus2InCus1" class="domain.Message">
+		<property name="sendDate" value="10/19/2018 09:01"/>
+		<property name="subject" value="Subject6"/>
+		<property name="body" value="OK"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="customer2"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+			</list>
+		</property>	
+	</bean>
+	<bean id="messageHw1Out" class="domain.Message">
 		<property name="sendDate" value="09/20/2018 19:00"/>
 		<property name="subject" value="Sin Asunto"/>
-		<property name="body" value="Vaya monton de trabajo que nos está dando el jefe."/>
+		<property name="body" value="body23"/>
 		<property name="priority" value="LOW" />
 		<property name="tags">
 			<list>
@@ -2126,10 +2587,44 @@
 			</list>
 		</property>	
 	</bean>
-	<bean id="messageHw2" class="domain.Message">
+	<bean id="messageHw1InHw2" class="domain.Message">
+		<property name="sendDate" value="09/20/2018 19:00"/>
+		<property name="subject" value="Sin Asunto"/>
+		<property name="body" value="body24"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="handyworker1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+			</list>
+		</property>	
+	</bean>
+	<bean id="messageHw1InHw3" class="domain.Message">
+		<property name="sendDate" value="09/20/2018 19:00"/>
+		<property name="subject" value="Sin Asunto"/>
+		<property name="body" value="body"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="handyworker1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+			</list>
+		</property>	
+	</bean>
+	<bean id="messageHw2Out" class="domain.Message">
 		<property name="sendDate" value="09/27/2018 19:00"/>
 		<property name="subject" value="Sin Asunto"/>
-		<property name="body" value="Vaya monton de trabajo que nos está dando el jefe."/>
+		<property name="body" value="body."/>
 		<property name="priority" value="LOW" />
 		<property name="tags">
 			<list>
@@ -2142,10 +2637,11 @@
 				<ref bean="handyworker3"></ref>
 			</list>
 		</property>	
-	</bean><bean id="messageHw3" class="domain.Message">
-		<property name="sendDate" value="09/25/2018 19:00"/>
+	</bean>
+	<bean id="messageHw2InHw1" class="domain.Message">
+		<property name="sendDate" value="09/27/2018 19:00"/>
 		<property name="subject" value="Sin Asunto"/>
-		<property name="body" value="Vaya monton de trabajo que nos está dando el jefe."/>
+		<property name="body" value="body29."/>
 		<property name="priority" value="LOW" />
 		<property name="tags">
 			<list>
@@ -2154,12 +2650,31 @@
 		<property name="sender" ref="handyworker2"/>
 		<property name="recipients">
 			<list>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker3"></ref>
+			</list>
+		</property>	
+	</bean>
+	<bean id="messageHw2InHw3" class="domain.Message">
+		<property name="sendDate" value="09/27/2018 19:00"/>
+		<property name="subject" value="Sin Asunto"/>
+		<property name="body" value="Body"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="handyworker2"/>
+		<property name="recipients">
+			<list>
+				<ref bean="handyworker1"></ref>
 				<ref bean="handyworker3"></ref>
 			</list>
 		</property>	
 	</bean>
 	
-	<bean id="messageSpo1" class="domain.Message">
+	
+	<bean id="messageSpo1Out" class="domain.Message">
 		<property name="sendDate" value="09/21/2018 19:00"/>
 		<property name="subject" value="XD"/>
 		<property name="body" value="XD"/>
@@ -2176,11 +2691,44 @@
 		</property>
 	</bean>
 	
-	<bean id="messageRef1" class="domain.Message">
-		<property name="sendDate" value="09/22/2018 16:00"/>
-		<property name="subject" value="Revision"/>
-		<property name="body" value="DP"/>
+	<bean id="messageSpo1InHw1" class="domain.Message">
+		<property name="sendDate" value="09/21/2018 19:00"/>
+		<property name="subject" value="XD"/>
+		<property name="body" value="XD"/>
 		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="sponsor1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="handyworker1"></ref>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="messageRef1Out" class="domain.Message">
+		<property name="sendDate" value="09/22/2018 20:00"/>
+		<property name="subject" value="Revisiones"/>
+		<property name="body" value="Cuerpo"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="referee1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="admin1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageRef1InAdm1" class="domain.Message">
+		<property name="sendDate" value="09/22/2018 20:00"/>
+		<property name="subject" value="Revisiones"/>
+		<property name="body" value="Cuerpo2"/>
+		<property name="priority" value="HIGH" />
 		<property name="tags">
 			<list>
 			</list>
@@ -2193,7 +2741,7 @@
 		</property>
 	</bean>
 	
-	<bean id="messageWelcome" class="domain.Message">
+	<bean id="messageWelcomeOut" class="domain.Message">
 		<property name="sendDate" value="09/17/2018 16:00"/>
 		<property name="subject" value="Bienvenidos/Welcome"/>
 		<property name="body" value="DP"/>
@@ -2205,7 +2753,7 @@
 		<property name="sender" ref="admin1"/>
 		<property name="recipients">
 			<list>
-				<ref bean="customer1"></ref>
+				<ref bean="customer"></ref>
 				<ref bean="customer2"></ref>
 				<ref bean="handyworker1"></ref>
 				<ref bean="handyworker2"></ref>
@@ -2215,7 +2763,163 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="messageSpam" class="domain.Message">
+	<bean id="messageWelcomeInCus1" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="Bienvenidos/Welcome"/>
+		<property name="body" value="DP"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+				<ref bean="sponsor1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageWelcomeInCus2" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="Bienvenidos/Welcome"/>
+		<property name="body" value="DP"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+				<ref bean="sponsor1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageWelcomeInHw1" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="Bienvenidos/Welcome"/>
+		<property name="body" value="DP"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+				<ref bean="sponsor1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageWelcomeInHw2" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="Bienvenidos/Welcome"/>
+		<property name="body" value="DP"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+				<ref bean="sponsor1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageWelcomeInHw3" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="Bienvenidos/Welcome"/>
+		<property name="body" value="DP"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+				<ref bean="sponsor1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageWelcomeInRef1" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="Bienvenidos/Welcome"/>
+		<property name="body" value="DP"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+				<ref bean="sponsor1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageWelcomeInSpo1" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="Bienvenidos/Welcome"/>
+		<property name="body" value="DP"/>
+		<property name="priority" value="LOW" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="admin1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+				<ref bean="sponsor1"></ref>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<bean id="messageSpamOut" class="domain.Message">
 		<property name="sendDate" value="09/17/2018 16:00"/>
 		<property name="subject" value="viagra"/>
 		<property name="body" value="sex"/>
@@ -2227,7 +2931,134 @@
 		<property name="sender" ref="sponsor1"/>
 		<property name="recipients">
 			<list>
-				<ref bean="customer1"></ref>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="messageSpamInCus1" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="viagra"/>
+		<property name="body" value="sex"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="sponsor1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageSpamInCus2" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="viagra"/>
+		<property name="body" value="sex"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="sponsor1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageSpamInHw1" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="viagra"/>
+		<property name="body" value="sex"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="sponsor1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageSpamInHw2" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="viagra"/>
+		<property name="body" value="sex"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="sponsor1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageSpamInHw3" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="viagra"/>
+		<property name="body" value="sex"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="sponsor1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
+				<ref bean="customer2"></ref>
+				<ref bean="handyworker1"></ref>
+				<ref bean="handyworker2"></ref>
+				<ref bean="handyworker3"></ref>
+				<ref bean="referee1"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="messageSpamInRef1" class="domain.Message">
+		<property name="sendDate" value="09/17/2018 16:00"/>
+		<property name="subject" value="viagra"/>
+		<property name="body" value="sex"/>
+		<property name="priority" value="HIGH" />
+		<property name="tags">
+			<list>
+			</list>
+		</property>
+		<property name="sender" ref="sponsor1"/>
+		<property name="recipients">
+			<list>
+				<ref bean="customer"></ref>
 				<ref bean="customer2"></ref>
 				<ref bean="handyworker1"></ref>
 				<ref bean="handyworker2"></ref>
@@ -2360,7 +3191,7 @@
  		<property name="photo" value="https://www.pinterest.es/pin/834432637187059998/"/>
   		<property name="phoneNumber" value="622587233" />
   		<property name="email" value="pablomachin@email.com" />
-  		<property name="address" value="Calle José Luis de Casso sin numero " /> 
+  		<property name="address" value="Calle JosÃƒÂ© Luis de Casso sin numero " /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   
@@ -2611,7 +3442,7 @@
  		<property name="photo" value="https://www.pinterest.es/pin/341640321728651867/"/>
   		<property name="phoneNumber" value="655834101" />
   		<property name="email" value="javi@email.com" />
-  		<property name="address" value="Avd Cosa Nº Casa Blq Piso 28ºA" /> 
+  		<property name="address" value="Avd Cosa NÃ‚Âº Casa Blq Piso 28Ã‚ÂºA" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="socialProfiles">
@@ -2630,7 +3461,7 @@
 		</property>
 		<property name="sponsorships"> 
 		      <list>
-		       <ref bean="sponsorShip1"/>
+		       <ref bean="sponsorship1"/>
 		      </list>
 		</property>
 
@@ -2644,7 +3475,7 @@
  		<property name="photo" value="https://www.pinterest.es/pin/341640321728651867/"/>
   		<property name="phoneNumber" value="655834101" />
   		<property name="email" value="paco@email.com" />
-  		<property name="address" value="Avd Cosa Nº Casa Blq Piso 76ºA" /> 
+  		<property name="address" value="Avd Cosa NÃ‚Âº Casa Blq Piso 76Ã‚ÂºA" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="socialProfiles">
@@ -2663,7 +3494,7 @@
 		</property>
 		<property name="sponsorships"> 
 		      <list>
-		       <ref bean="sponsorShip2"/>
+		       <ref bean="sponsorship2"/>
 		      </list>
 		</property>
 
@@ -2678,7 +3509,7 @@
  		<property name="photo" value="https://www.pinterest.es/pin/341640321728651867/"/>
   		<property name="phoneNumber" value="655834101" />
   		<property name="email" value="juan@email.com" />
-  		<property name="address" value="Avd Cosa Nº Casa Blq Piso 8ºA" /> 
+  		<property name="address" value="Avd Cosa NÃ‚Âº Casa Blq Piso 8Ã‚ÂºA" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="socialProfiles">
@@ -2697,7 +3528,7 @@
 		</property>
 		<property name="sponsorships"> 
 		      <list>
-		       <ref bean="sponsorShip3"/>
+		       <ref bean="sponsorship3"/>
 		      </list>
 		</property>
 
@@ -2712,7 +3543,7 @@
  		<property name="photo" value="https://www.pinterest.es/pin/341640321728651867/"/>
   		<property name="phoneNumber" value="655834171" />
   		<property name="email" value="javiera@email.com" />
-  		<property name="address" value="Avd Cosa Nº Casa Blq Piso 28ºH" /> 
+  		<property name="address" value="Avd Cosa NÃ‚Âº Casa Blq Piso 28Ã‚ÂºH" /> 
   		<property name="suspicious" value="false"/>
   		<property name="banned" value="false"/>
   		<property name="socialProfiles">
@@ -2731,7 +3562,7 @@
 		</property>
 		<property name="sponsorships"> 
 		      <list>
-		       <ref bean="sponsorShip4"/>
+		       <ref bean="sponsorship4"/>
 		      </list>
 		</property>
 
@@ -2740,7 +3571,7 @@
 	
 	<!-- SPONSORSHIP -->
 	
-	<bean id="sponsorShip1" class="domain.Sponsorship">
+	<bean id="sponsorship1" class="domain.Sponsorship">
 		<property name="bannerUrl" value="https://www.pinterest.es/pin/730638739520175806/" />
 		<property name="targetPage" value="https://www.pinterest.es/pin/730638739520175806/" />
 		<property name="creditCard" ref="creditcard1" /> 
@@ -2748,7 +3579,7 @@
 			
 	</bean>
 	
-	<bean id="sponsorShip2" class="domain.Sponsorship">
+	<bean id="sponsorship2" class="domain.Sponsorship">
 		<property name="bannerUrl" value="https://www.SponsorShip2.es" />
 		<property name="targetPage" value="https://www.SponsorShip2.es/pin/730638739520175806/" />
 		<property name="creditCard" ref="creditcard1" /> 
@@ -2756,14 +3587,14 @@
 			
 	</bean>
 	
-	<bean id="sponsorShip3" class="domain.Sponsorship">
+	<bean id="sponsorship3" class="domain.Sponsorship">
 		<property name="bannerUrl" value="https://www.SponsorShip3.es" />
 		<property name="targetPage" value="https://www.SponsorShip3.es/pin/730638739520175806/" />
 		<property name="creditCard" ref="creditcard1" /> 
 		<property name="tutorial" ref="tutorial2" /> 
 			
 	</bean>
-	<bean id="sponsorShip4" class="domain.Sponsorship">
+	<bean id="sponsorship4" class="domain.Sponsorship">
 		<property name="bannerUrl" value="https://www.SponsorShip4.es" />
 		<property name="targetPage" value="https://www.SponsorShip.es/pin/730638739520175806/" />
 		<property name="creditCard" ref="creditcard1" /> 
@@ -2790,7 +3621,7 @@
 		<property name="handyWorker" ref="handyworker1" /> 
 		<property name="sponsorShips"> 
 		      <list>
-		       <ref bean="sponsorShip1"/>
+		       <ref bean="sponsorship1"/>
 		      </list>
 		</property>
 		      
@@ -2840,9 +3671,9 @@
 		<property name="handyWorker" ref="handyworker2" /> 
 		<property name="sponsorShips"> 
 		      <list>
-		       <ref bean="sponsorShip1"/>
-		       <ref bean="sponsorShip2"/>
-		       <ref bean="sponsorShip3"/>
+		       <ref bean="sponsorship1"/>
+		       <ref bean="sponsorship2"/>
+		       <ref bean="sponsorship3"/>
 		      </list>
 		</property>
 		      
@@ -2858,7 +3689,7 @@
 	
 	<bean id="warranty2" class="domain.Warranty">
 		<property name="title" value="Garantía 2"></property>
-		<property name="terms" value="Incluye reparación, reposición o cambio del producto."></property>
+		<property name="terms" value="Incluye reparaciÃƒÂ³n, reposiciÃƒÂ³n o cambio del producto."></property>
 		<property name="applicableLaws" value="Ley 1, ley 2, ley3"></property>
 		<property name="finalMode" value="false"></property>
 	</bean>

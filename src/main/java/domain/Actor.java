@@ -19,7 +19,7 @@ import security.UserAccount;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Actor extends DomainEntity {
+public class Actor extends DomainEntity implements Cloneable{
 
 	private String						name;
 	private String						middleName;
@@ -34,6 +34,15 @@ public class Actor extends DomainEntity {
 	private UserAccount					userAccount;
 	private Collection<MessageBox>		messageBoxes;
 
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 	@NotBlank
 	public String getName() {
@@ -93,21 +102,26 @@ public class Actor extends DomainEntity {
 		this.address = address;
 	}
 
+	
 	public boolean isSuspicious() {
-		return this.suspicious;
+		return suspicious;
 	}
 
-	public void setSuspicious(final boolean suspicious) {
+	
+	public void setSuspicious(boolean suspicious) {
 		this.suspicious = suspicious;
 	}
 
+	
 	public boolean isBanned() {
-		return this.banned;
+		return banned;
 	}
 
-	public void setBanned(final boolean banned) {
+	
+	public void setBanned(boolean banned) {
 		this.banned = banned;
 	}
+
 	@NotNull
 	@OneToMany
 	public Collection<SocialProfile> getSocialProfiles() {

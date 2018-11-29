@@ -10,6 +10,8 @@
 
 package security;
 
+import java.util.Collection;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -20,4 +22,7 @@ public interface UserAccountRepository extends JpaRepository<UserAccount, Intege
 	@Query("select ua from UserAccount ua where ua.username = ?1")
 	UserAccount findByUsername(String username);
 
+	@Query("select u.username from UserAccount u")
+	Collection<String> findAllUsernames();
+	
 }

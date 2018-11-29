@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Sponsorship extends DomainEntity {
+public class Sponsorship extends DomainEntity implements Cloneable {
 
 	private String		bannerUrl;
 	private String		targetPage;
@@ -55,6 +55,15 @@ public class Sponsorship extends DomainEntity {
 
 	public void setCreditCard(final CreditCard creditCard) {
 		this.creditCard = creditCard;
+	}
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
 	}
 
 }

@@ -13,13 +13,22 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class MessageBox extends DomainEntity {
+public class MessageBox extends DomainEntity implements Cloneable{
 
 	private String				name;
 	private boolean				isSystem;
 	private Collection<Message>	messages;
-
-
+	
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
+	
 	@NotBlank
 	public String getName() {
 		return this.name;
@@ -42,5 +51,7 @@ public class MessageBox extends DomainEntity {
 	public void setIsSystem(final boolean isSystem) {
 		this.isSystem = isSystem;
 	}
+	
+	
 
 }

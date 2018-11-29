@@ -8,11 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 
+import org.hibernate.search.annotations.Field;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Category extends DomainEntity {
+public class Category extends DomainEntity implements Cloneable {
 
 	private String		name;
 	private Category	parentCategory;
@@ -20,6 +21,7 @@ public class Category extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
+	@Field
 	public String getName() {
 		return this.name;
 	}
@@ -36,6 +38,15 @@ public class Category extends DomainEntity {
 
 	public void setParentCategory(final Category parentCategory) {
 		this.parentCategory = parentCategory;
+	}
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
 	}
 
 }

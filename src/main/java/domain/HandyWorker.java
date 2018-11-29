@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class HandyWorker extends Endorser {
+public class HandyWorker extends Endorser implements Cloneable{
 
 	private String					make;
 	private Collection<Curriculum>	curricula;
@@ -23,7 +23,13 @@ public class HandyWorker extends Endorser {
 	private Collection<Tutorial>	tutorials;
 	private Collection<Application>	applications;
 
-
+	@Override
+	public Object clone() {
+		Object o = null;
+		o = super.clone();
+		return o;
+	}
+	
 	@NotBlank
 	public String getMake() {
 		return this.make;

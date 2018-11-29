@@ -20,7 +20,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Report extends DomainEntity {
+public class Report extends DomainEntity implements Cloneable{
 
 	private Date				moment;
 	private String				description;
@@ -30,7 +30,15 @@ public class Report extends DomainEntity {
 	private Collection<Note>	notes;
 	private Complaint			complaint;
 
-
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 	@NotNull
 	@Past
 	@Temporal(TemporalType.TIMESTAMP)

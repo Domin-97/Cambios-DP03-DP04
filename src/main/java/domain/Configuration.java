@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Configuration extends DomainEntity {
+public class Configuration extends DomainEntity implements Cloneable{
 
 	private String						systemName;
 	private String						banner;
@@ -30,7 +30,15 @@ public class Configuration extends DomainEntity {
 	private static Collection<String>	positiveWords;
 	private static Collection<String>	negativeWords;
 
-
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 	@NotBlank
 	public String getSystemName() {
 		return this.systemName;

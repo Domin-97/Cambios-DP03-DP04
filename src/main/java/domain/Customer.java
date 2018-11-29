@@ -11,18 +11,25 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Customer extends Endorser {
+public class Customer extends Endorser implements Cloneable {
 
 	private Collection<FixUpTask>	fixUpTasks;
+
+
+	@Override
+	public Object clone() {
+		Object o = null;
+		o = super.clone();
+		return o;
+	}
 
 	@NotNull
 	@OneToMany(mappedBy = "customer")
 	public Collection<FixUpTask> getFixUpTasks() {
-		return fixUpTasks;
+		return this.fixUpTasks;
 	}
 
-	
-	public void setFixUpTasks(Collection<FixUpTask> fixUpTasks) {
+	public void setFixUpTasks(final Collection<FixUpTask> fixUpTasks) {
 		this.fixUpTasks = fixUpTasks;
 	}
 }

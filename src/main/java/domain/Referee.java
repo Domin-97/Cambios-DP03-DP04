@@ -11,11 +11,17 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Referee extends Actor {
+public class Referee extends Actor implements Cloneable{
 
 	private Collection<Report>	reportsWritten;
 
 
+	@Override
+	public Object clone() {
+		Object o = null;
+		o = super.clone();
+		return o;
+	}
 	@NotNull
 	@OneToMany
 	public Collection<Report> getReportsWritten() {

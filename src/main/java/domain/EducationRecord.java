@@ -18,7 +18,7 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class EducationRecord extends DomainEntity {
+public class EducationRecord extends DomainEntity implements Cloneable{
 
 	private String				eduTitle;
 	private Date				eduStartDate;
@@ -27,7 +27,16 @@ public class EducationRecord extends DomainEntity {
 	private String				eduAttachment;
 	private Collection<String>	comments;
 
-
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
+	
 	@NotBlank
 	public String getEduTitle() {
 		return this.eduTitle;

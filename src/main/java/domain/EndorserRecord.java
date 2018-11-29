@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class EndorserRecord extends DomainEntity {
+public class EndorserRecord extends DomainEntity implements Cloneable {
 
 	private String				fullname;
 	private String				email;
@@ -65,13 +65,20 @@ public class EndorserRecord extends DomainEntity {
 	@NotNull
 	@ElementCollection
 	public Collection<String> getEndComment() {
-		return endComment;
+		return this.endComment;
 	}
 
-	
-	public void setEndComment(Collection<String> endComment) {
+	public void setEndComment(final Collection<String> endComment) {
 		this.endComment = endComment;
 	}
-	
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 }

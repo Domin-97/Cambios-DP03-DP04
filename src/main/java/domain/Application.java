@@ -18,7 +18,7 @@ import javax.validation.constraints.Pattern;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Application extends DomainEntity {
+public class Application extends DomainEntity implements Cloneable{
 
 	private Date				moment;
 	private String				status;
@@ -31,6 +31,16 @@ public class Application extends DomainEntity {
 	public static final String	ACCEPTED	= "ACCEPTED";
 	public static final String	REJECTED	= "REJECTED";
 	public static final String	PENDING		= "PENDING";
+	
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 
 	@NotNull

@@ -10,7 +10,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Warranty extends DomainEntity {
+public class Warranty extends DomainEntity implements Cloneable {
 
 	private String	title;
 	private String	terms;
@@ -51,5 +51,14 @@ public class Warranty extends DomainEntity {
 	public void setFinalMode(final boolean finalMode) {
 		this.finalMode = finalMode;
 	}
-
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 }
+

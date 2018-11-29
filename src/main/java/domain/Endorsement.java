@@ -15,12 +15,22 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Endorsement extends DomainEntity {
+public class Endorsement extends DomainEntity implements Cloneable {
 
 	private Date	moment;
 	private String	comment;
 	private double	score;
 
+
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 
 	@NotNull
 	@Past

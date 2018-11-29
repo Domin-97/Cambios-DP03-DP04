@@ -17,7 +17,7 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Curriculum extends DomainEntity {
+public class Curriculum extends DomainEntity implements Cloneable{
 
 	private String							ticker;
 	private String							fullname;
@@ -30,7 +30,17 @@ public class Curriculum extends DomainEntity {
 	private Collection<MiscellaneousRecord>	misRecord;
 	private Collection<EndorserRecord>		endRecord;
 
-
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (CloneNotSupportedException ex) {
+		}
+		return o;
+	}
+	
+	
 	@NotBlank
 	@Column(unique = true)
 	public String getTicker() {

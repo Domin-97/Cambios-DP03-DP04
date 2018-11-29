@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class MiscellaneousRecord extends DomainEntity {
+public class MiscellaneousRecord extends DomainEntity implements Cloneable {
 
 	private String				misTitle;
 	private String				attachment;
@@ -47,6 +47,15 @@ public class MiscellaneousRecord extends DomainEntity {
 
 	public void setComments(final Collection<String> comments) {
 		this.comments = comments;
+	}
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
 	}
 
 }

@@ -16,24 +16,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
-import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
-import org.apache.lucene.analysis.core.WhitespaceTokenizer;
-import org.apache.lucene.analysis.core.WhitespaceTokenizerFactory;
-import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
-import org.apache.lucene.analysis.ngram.EdgeNGramFilterFactory;
-import org.apache.lucene.analysis.ngram.NGramFilterFactory;
-import org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory;
-import org.apache.lucene.analysis.standard.StandardTokenizerFactory;
-import org.hibernate.search.annotations.Analyze;
-import org.hibernate.search.annotations.Analyzer;
-import org.hibernate.search.annotations.AnalyzerDef;
 import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
-import org.hibernate.search.annotations.Parameter;
-import org.hibernate.search.annotations.Store;
-import org.hibernate.search.annotations.TokenFilterDef;
-import org.hibernate.search.annotations.TokenizerDef;
+import org.hibernate.search.annotations.IndexedEmbedded;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Indexed
@@ -50,7 +35,7 @@ import org.hibernate.validator.constraints.NotBlank;
 //    @TokenFilterDef(factory = LowerCaseFilterFactory.class)
 //    
 //})
-public class FixUpTask extends DomainEntity {
+public class FixUpTask extends DomainEntity implements Cloneable {
 
 	private String					ticker;
 	private Date					publishedMoment;
@@ -69,7 +54,7 @@ public class FixUpTask extends DomainEntity {
 
 
 	@Field
-//	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO,analyzer = @Analyzer(definition = "customAnalyzer"))
+	//	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO,analyzer = @Analyzer(definition = "customAnalyzer"))
 	@NotBlank
 	@Column(unique = true)
 	public String getTicker() {
@@ -92,7 +77,7 @@ public class FixUpTask extends DomainEntity {
 	}
 
 	@Field
-//	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO, analyzer = @Analyzer(definition = "customAnalyzer"))
+	//	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO, analyzer = @Analyzer(definition = "customAnalyzer"))
 	@NotBlank
 	public String getDescription() {
 		return this.description;
@@ -103,7 +88,7 @@ public class FixUpTask extends DomainEntity {
 	}
 
 	@Field
-//	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO, analyzer = @Analyzer(definition = "customAnalyzer"))
+	//	@Field(index=Index.YES, analyze=Analyze.YES, store=Store.NO, analyzer = @Analyzer(definition = "customAnalyzer"))
 	@NotBlank
 	public String getAddress() {
 		return this.address;
@@ -179,6 +164,7 @@ public class FixUpTask extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
+	@IndexedEmbedded
 	public Category getCategory() {
 		return this.category;
 	}
@@ -206,5 +192,13 @@ public class FixUpTask extends DomainEntity {
 	public void setComplaints(final Collection<Complaint> complaints) {
 		this.complaints = complaints;
 	}
-
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
+	}
 }

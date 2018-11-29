@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Phase extends DomainEntity {
+public class Phase extends DomainEntity implements Cloneable {
 
 	private int		number;
 	private String	title;
@@ -66,6 +66,15 @@ public class Phase extends DomainEntity {
 
 	public void setNumber(final int number) {
 		this.number = number;
+	}
+	@Override
+	public Object clone() {
+		Object o = null;
+		try {
+			o = super.clone();
+		} catch (final CloneNotSupportedException ex) {
+		}
+		return o;
 	}
 
 }
